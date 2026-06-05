@@ -1,5 +1,25 @@
 # Known Limitations & Planned Refinements
+## Data Sources
 
+### Vacancy Rate
+- **Rate Used:** 5.7%
+- **Source:** U.S. Census Bureau, Current Population Survey/Housing Vacancy Survey (CPS/HVS)
+- **Table:** Table 4 - Rental Vacancy Rates for the 75 Largest Metropolitan Statistical Areas: 2026
+- **Geography:** Chicago-Naperville-Elgin, IL-IN Metro
+- **Last Revised:** April 28, 2026
+- **URL:** https://www.census.gov/housing/hvs/data/rates.html
+
+### Market Rents
+- **Source:** Zillow Rental Market Trends
+- **Geography:** Evanston, IL
+- **Last Updated:** June 3, 2026
+- **URL:** https://www.zillow.com/rental-manager/market-trends/evanston-il
+
+### Property Tax Rate
+- **Rate Used:** 1.8% of market value
+- **Source:** TO BE VERIFIED - Cook County Assessor
+- **URL:** https://www.cookcountyassessor.com
+- **Status:** ⚠️ Needs verification against actual tax bills
 ## Data Limitations
 
 ### 1. Unit Count Estimation
