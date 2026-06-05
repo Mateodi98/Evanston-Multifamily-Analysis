@@ -1,0 +1,51 @@
+address,city,zip,price,beds,baths,sqft,lot_size,year_built,days_on_market,price_per_sqft,property_type,sold_date,latitude,longitude
+2111 Wesley Ave,Evanston,60201,400000,4.0,3.0,1635.0,7000.0,1903.0,,245.0,Multi-Family (2-4 Unit),,42.0562448,-87.6905999
+2635 Poplar Ave,Evanston,60201,1500000,6.0,4.5,,10890.0,1878.0,,,Multi-Family (2-4 Unit),January-20-2026,42.0658789,-87.6989924
+1835 Darrow Ave,Evanston,60201,299000,5.0,2.0,2128.0,7293.0,1899.0,,141.0,Multi-Family (2-4 Unit),,42.0515001,-87.6971007
+1202 Maple Ave,Evanston,60202,1100000,6.0,2.0,,6765.0,1898.0,,,Multi-Family (2-4 Unit),May-1-2026,42.0396116,-87.6855509
+827 Sherman Ave,Evanston,60202,774000,5.0,3.0,,3535.0,1911.0,,,Multi-Family (2-4 Unit),August-4-2025,42.0331212,-87.6819237
+727 Dobson St,Evanston,60202,830000,9.0,3.0,4752.0,3750.0,1926.0,,175.0,Multi-Family (2-4 Unit),,42.0205445,-87.6817494
+518 Hamilton St,Evanston,60202,350000,4.0,2.0,,,,,,Multi-Family (2-4 Unit),January-26-2026,42.0390965,-87.6798213
+1521 Lake St,Evanston,60201,450000,4.0,3.0,,3024.0,1899.0,,,Multi-Family (2-4 Unit),February-26-2026,42.0444916,-87.6947353
+701 Reba Pl,Evanston,60202,630000,5.0,2.0,,2925.0,1905.0,,,Multi-Family (2-4 Unit),March-12-2026,42.0300607,-87.6805051
+1104 Austin St,Evanston,60202,1145000,7.0,5.0,,12012.0,1926.0,,,Multi-Family (2-4 Unit),April-21-2026,42.0253597,-87.6872629
+1631 Monroe St,Evanston,60202,870000,9.0,3.0,,4305.0,1927.0,,,Multi-Family (2-4 Unit),August-11-2025,42.0309932,-87.6962931
+727 Dobson St,Evanston,60202,830000,9.0,3.0,,3750.0,1926.0,,,Multi-Family (2-4 Unit),June-9-2025,42.0205445,-87.6817494
+1730 Madison St,Evanston,60202,635000,4.0,2.0,,4305.0,1947.0,,,Multi-Family (2-4 Unit),June-6-2025,42.0314203,-87.6978103
+209 Ridge Ave,Evanston,60202,1300000,14.0,10.0,,,1962.0,,,Multi-Family (5+ Unit),October-8-2025,42.021589,-87.6845421
+1317 Brummel St,Evanston,60202,1100000,13.0,7.0,,,1926.0,,,Multi-Family (5+ Unit),October-8-2025,42.0217505,-87.691047
+1521 Crain St,Evanston,60202,450000,6.0,2.0,,3927.0,1896.0,,,Multi-Family (2-4 Unit),February-18-2026,42.0389544,-87.6939156
+134 Callan Ave,Evanston,60202,640000,4.0,3.0,,4125.0,1955.0,,,Multi-Family (2-4 Unit),September-15-2025,42.0206061,-87.6794994
+1723 Greenwood St,Evanston,60201,717000,6.0,4.0,,7056.0,1894.0,,,Multi-Family (2-4 Unit),January-12-2026,42.0430242,-87.6973261
+1810 Washington St,Evanston,60202,785000,7.0,3.0,,6098.0,1929.0,,,Multi-Family (2-4 Unit),April-24-2026,42.032443,-87.6983143
+1811 Emerson St,Evanston,60201,605000,8.0,5.0,,7840.0,1920.0,,,Multi-Family (2-4 Unit),June-16-2025,42.0523452,-87.697979
+2303 Ridge Ave,Evanston,60201,750000,6.0,2.0,,4650.0,1912.0,,,Multi-Family (2-4 Unit),June-2-2026,42.0594093,-87.6851217
+815 Mulford St,Evanston,60202,550000,4.0,2.0,,3484.0,1923.0,,,Multi-Family (2-4 Unit),September-19-2025,42.0232045,-87.6835096
+1021 South Blvd,Evanston,60202,650000,7.0,4.5,,,,,,Multi-Family (2-4 Unit),December-23-2025,42.0280463,-87.6866685
+1819 Hartrey Ave,Evanston,60201,379000,4.0,2.0,,3960.0,1945.0,,,Multi-Family (2-4 Unit),May-29-2026,42.0508241,-87.7033309
+1232 Florence Ave,Evanston,60202,815000,9.0,5.0,,,1915.0,,,Multi-Family (2-4 Unit),September-26-2025,42.0406563,-87.6948393
+1222 Austin St,Evanston,60202,605275,7.0,4.0,,6720.0,1956.0,,,Multi-Family (2-4 Unit),July-2-2025,42.0254057,-87.6897462
+318 Custer Ave,Evanston,60202,690000,5.0,3.0,,3920.0,1957.0,,,Multi-Family (2-4 Unit),July-30-2025,42.0237199,-87.6807453
+1218 Dewey Ave,Evanston,60202,525000,4.0,2.0,,5184.0,1931.0,,,Multi-Family (2-4 Unit),September-29-2025,42.0401148,-87.6963879
+1408 Seward St,Evanston,60202,615000,4.0,2.0,,4420.0,1926.0,,,Multi-Family (2-4 Unit),December-2-2025,42.0287965,-87.6919842
+624 Clark St,Evanston,60201,1235000,9.0,3.0,,4791.0,1921.0,,,Multi-Family (2-4 Unit),March-19-2026,42.0495927,-87.6794037
+8822 Forestview Rd,Evanston,60203,730000,6.0,4.0,3200.0,8055.0,1956.0,,228.0,Multi-Family (2-4 Unit),January-7-2026,42.0416504,-87.7144588
+1801 Lyons St,Evanston,60201,437000,6.0,2.0,,,1913.0,,,Multi-Family (2-4 Unit),January-23-2026,42.0503915,-87.6975994
+1633 Mcdaniel Ave,Evanston,60201,567825,8.0,3.0,,8350.0,1906.0,,,Multi-Family (2-4 Unit),February-6-2026,42.0476526,-87.7080169
+1214 Hull Ter,Evanston,60202,610000,6.0,4.0,,5723.0,1956.0,,,Multi-Family (2-4 Unit),October-29-2025,42.0242928,-87.6893754
+1213 Darrow Ave,Evanston,60202,449000,4.0,2.0,,4791.0,1892.0,,,Multi-Family (2-4 Unit),May-12-2026,42.0398354,-87.6973115
+1029 Hull Ter,Evanston,60202,850000,6.0,3.0,,,1923.0,,,Multi-Family (2-4 Unit),June-27-2025,42.0248127,-87.6867401
+1406 Brummel St,Evanston,60202,710000,8.0,5.0,,,1953.0,,,Multi-Family (2-4 Unit),December-2-2025,42.0212384,-87.6920394
+1824 Crain St,Evanston,60202,527500,5.0,4.0,,5550.0,1923.0,,,Multi-Family (2-4 Unit),July-14-2025,42.0391334,-87.6989977
+2024 Maple Ave,Evanston,60201,675000,5.0,2.0,,3375.0,1894.0,,,Multi-Family (2-4 Unit),June-30-2025,42.0548872,-87.685009
+1909 Asbury Ave,Evanston,60201,470000,6.0,3.0,,,1890.0,,,Multi-Family (2-4 Unit),June-20-2025,42.0526516,-87.6898287
+1810 Monroe St,Evanston,60202,660000,7.0,4.5,,4356.0,1956.0,,,Multi-Family (2-4 Unit),October-15-2025,42.0305106,-87.6983454
+1915 Asbury Ave,Evanston,60201,460000,4.0,2.0,,,1890.0,,,Multi-Family (2-4 Unit),October-24-2025,42.052856,-87.6897764
+1232 Florence Ave #1234,Evanston,60202,815000,7.0,3.0,3230.0,6561.0,1915.0,,252.0,Multi-Family (2-4 Unit),,42.0406411,-87.694846
+1029 Hull Ter #2,Evanston,60202,850000,7.0,3.0,3650.0,6084.0,1925.0,,233.0,Multi-Family (2-4 Unit),,42.0248176,-87.6867234
+1214 Hull Ter #1,Evanston,60202,610000,6.0,3.5,3712.0,5775.0,1956.0,,164.0,Multi-Family (2-4 Unit),,42.0242928,-87.6893754
+1917 Asbury Ave,Evanston,60201,460000,6.0,2.0,2756.0,2500.0,1890.0,,167.0,Multi-Family (2-4 Unit),,42.0530433,-87.689811
+8822 Forestview Rd #2,Evanston,60203,730000,6.0,4.0,3360.0,8055.0,1956.0,,217.0,Multi-Family (5+ Unit),,42.0416525,-87.7144363
+1009 Dewey Ave,Evanston,60202,825000,6.0,2.0,2224.0,8150.0,1924.0,,371.0,Multi-Family (2-4 Unit),,42.0361915,-87.695812
+1218 Dewey Ave Unit 2FL,Evanston,60202,525000,4.0,2.0,1824.0,5184.0,1930.0,,288.0,Multi-Family (2-4 Unit),,42.0401148,-87.6963879
+1406 Brummel St Unit 1W,Evanston,60202,710000,8.0,6.0,3960.0,6450.0,1952.0,,179.0,Multi-Family (5+ Unit),,42.0212451,-87.6921221
