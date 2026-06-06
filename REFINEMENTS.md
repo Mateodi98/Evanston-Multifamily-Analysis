@@ -81,3 +81,10 @@ Monte Carlo simulation across rate scenarios would be more robust.
 - [ ] Integration with Cook County Assessor API for actual tax bills
 - [ ] Days on market analysis using supplemental data source
 - [ ] Monte Carlo simulation for interest rate sensitivity
+- [ ] Manual verification of unit counts for the 21 target properties 
+      (≤ $620,000) against individual Redfin/MLS listings to improve 
+      rent estimate accuracy. Priority: top 5 deals by Break-Even Ratio.
+      Estimated impact: up to $448/month cash flow variance per property.
+      Update 04_underwriting_engine.py after manually entering the number
+      of units per property, so the gross income is adjusted and the cashflow
+      is accurate. 
