@@ -20,6 +20,13 @@ CAPEX_RESERVE_PCT = 0.05         # 5% of gross annual rent
 # Source: U.S. Census Bureau CPS/HVS Table 4, 2026 - Chicago Metro
 VACANCY_RATE = 0.057
 
+# ── APPRECIATION ASSUMPTIONS ─────────────────────────────────────────────
+# Source: Zillow Home Value Index, Evanston IL, 2026
+# Source: Evanston Now, February 2026 (evanstonnow.com)
+APPRECIATION_RATE_CONSERVATIVE = 0.035  # 3.5% - Zillow trailing 12 months
+APPRECIATION_RATE_MODERATE = 0.058      # 5.8% - Evanston Now January 2026
+HOLD_YEARS = [5, 10]                    # Analysis horizons
+
 # ── COOK COUNTY TAX RATE ─────────────────────────────────────────────────
 # Source: Cook County Assessor - needs verification per property ⚠️
 COOK_COUNTY_TAX_RATE = 0.018
@@ -32,6 +39,12 @@ def calculate_monthly_mortgage(price, down_pct, annual_rate, years):
     payment = loan_amount * (monthly_rate * (1 + monthly_rate)**n_payments) / \
               ((1 + monthly_rate)**n_payments - 1)
     return payment
+
+def calculate_appreciation(price, annual_rate, years):
+    """Calculate projected property value and equity gain."""
+    future_value = price * (1 + annual_rate) ** years
+    appreciation_gain = future_value - price
+    return round(future_value, 2), round(appreciation_gain, 2)
 
 def underwrite_property(row):
     """
@@ -94,6 +107,25 @@ def underwrite_property(row):
     # Expense ratio
     expense_ratio = (total_expenses / gross_annual_rent) * 100
 
+    # ── APPRECIATION & TOTAL RETURN ──────────────────────────────────────
+    # Conservative scenario (3.5%/yr - Zillow 2026)
+    fv_5yr_cons, appr_5yr_cons = calculate_appreciation(
+        price, APPRECIATION_RATE_CONSERVATIVE, 5)
+    fv_10yr_cons, appr_10yr_cons = calculate_appreciation(
+        price, APPRECIATION_RATE_CONSERVATIVE, 10)
+
+    # Moderate scenario (5.8%/yr - Evanston Now 2026)
+    fv_5yr_mod, appr_5yr_mod = calculate_appreciation(
+        price, APPRECIATION_RATE_MODERATE, 5)
+    fv_10yr_mod, appr_10yr_mod = calculate_appreciation(
+        price, APPRECIATION_RATE_MODERATE, 10)
+
+    # Total return = Cash Flow + Appreciation (5yr conservative)
+    total_cash_flow_5yr = annual_cash_flow * 5
+    total_return_5yr_cons = total_cash_flow_5yr + appr_5yr_cons
+    total_return_5yr_mod = total_cash_flow_5yr + appr_5yr_mod
+
+
     return {
         # Revenue
         'gross_annual_rent': round(gross_annual_rent, 2),
@@ -122,6 +154,15 @@ def underwrite_property(row):
         'dscr': round(dscr, 3),
         'break_even_ratio': round(break_even_ratio, 3),
         'coc_return': round(coc_return, 2),
+        # Appreciation
+        'fv_5yr_conservative': fv_5yr_cons,
+        'appreciation_5yr_conservative': appr_5yr_cons,
+        'fv_5yr_moderate': fv_5yr_mod,
+        'appreciation_5yr_moderate': appr_5yr_mod,
+        'fv_10yr_conservative': fv_10yr_cons,
+        'fv_10yr_moderate': fv_10yr_mod,
+        'total_return_5yr_conservative': round(total_return_5yr_cons, 2),
+        'total_return_5yr_moderate': round(total_return_5yr_mod, 2),
     }
 
 # ── LOAD DATA ────────────────────────────────────────────────────────────
@@ -161,6 +202,14 @@ print(df_target[cols].to_string())
 print("\n── TOP 5 DEALS BY BREAK-EVEN RATIO ───────────────────────────────")
 top5 = df.nlargest(5, 'break_even_ratio')[cols]
 print(top5.to_string())
+
+print("\n── TOP 5 DEALS BY TOTAL RETURN (5yr Conservative) ────────────────")
+top5_appr = df.nlargest(5, 'total_return_5yr_conservative')[
+    ['address', 'price', 'monthly_cash_flow', 'cap_rate',
+     'fv_5yr_conservative', 'total_return_5yr_conservative',
+     'fv_5yr_moderate', 'total_return_5yr_moderate', 'fannie_eligible']
+]
+print(top5_appr.to_string())
 
 # ── SAVE RESULTS ─────────────────────────────────────────────────────────
 df.to_csv('data/underwriting_results.csv', index=False)

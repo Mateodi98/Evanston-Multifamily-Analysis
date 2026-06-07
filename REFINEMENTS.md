@@ -88,3 +88,8 @@ Monte Carlo simulation across rate scenarios would be more robust.
       Update 04_underwriting_engine.py after manually entering the number
       of units per property, so the gross income is adjusted and the cashflow
       is accurate. 
+- [ ] ZIP code level appreciation rates using Zillow ZHVI by ZIP code
+      (file already downloaded). Replace blanket city-wide appreciation
+      rates (3.5% conservative, 5.8% moderate) with actual per-ZIP rates
+      for 60201, 60202, and 60203 to reflect location-based appreciation
+      differences across Evanston neighborhoods.
