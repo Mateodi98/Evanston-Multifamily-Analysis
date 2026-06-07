@@ -168,6 +168,13 @@ def underwrite_property(row):
 # ── LOAD DATA ────────────────────────────────────────────────────────────
 df = pd.read_csv('data/listings_with_rents.csv')
 
+# ── DATA QUALITY FLAGS ───────────────────────────────────────────────────
+# 1835 Darrow Ave excluded: cap rate 17.21% is unrealistic for Evanston
+# likely due to unverified unit count. Flagged as data quality outlier.
+df_excluded = df[df['address'] == '1835 Darrow Ave']
+df = df[df['address'] != '1835 Darrow Ave'].reset_index(drop=True)
+print(f"Excluded 1 outlier: 1835 Darrow Ave (cap rate outlier - see REFINEMENTS.md)")
+
 # ── APPLY UNDERWRITING ───────────────────────────────────────────────────
 results = df.apply(underwrite_property, axis=1, result_type='expand')
 df = pd.concat([df[['address', 'price', 'beds', 'est_units',
@@ -203,13 +210,13 @@ print("\n── TOP 5 DEALS BY BREAK-EVEN RATIO ──────────�
 top5 = df.nlargest(5, 'break_even_ratio')[cols]
 print(top5.to_string())
 
-print("\n── TOP 5 DEALS BY TOTAL RETURN (5yr Conservative) ────────────────")
-top5_appr = df.nlargest(5, 'total_return_5yr_conservative')[
+print("\n── TOP 5 DEALS BY TOTAL RETURN (5yr Conservative) — ELIGIBLE ONLY ─")
+top5 = df[df['fannie_eligible'] == True].nlargest(5, 'total_return_5yr_conservative')[
     ['address', 'price', 'monthly_cash_flow', 'cap_rate',
      'fv_5yr_conservative', 'total_return_5yr_conservative',
      'fv_5yr_moderate', 'total_return_5yr_moderate', 'fannie_eligible']
 ]
-print(top5_appr.to_string())
+print(top5.to_string())
 
 # ── SAVE RESULTS ─────────────────────────────────────────────────────────
 df.to_csv('data/underwriting_results.csv', index=False)
