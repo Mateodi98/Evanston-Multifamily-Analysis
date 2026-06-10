@@ -1,26 +1,29 @@
 # Research Hypothesis
 
 ## Question
-Does a financially viable duplex or small multifamily property (2-4 units) 
-exist in Evanston, IL that meets Fannie Mae's residential underwriting 
-requirements for owner-occupied financing under current market conditions?
+In the Evanston real estate market, which type of multifamily property 
+(duplex, 3-flat, or 4-unit) offers the best investment outcome for an 
+owner-occupied buyer under current market conditions?
 
 ## Hypothesis
-Evanston multifamily properties (2-4 units) priced at or below $620,000 
-with 20% down payment at a 6.8% interest rate will achieve a Break-Even 
-Ratio of at least 1.0x per Fannie Mae's residential guidelines for 
-owner-occupied 2-4 unit properties, and a DSCR of at least 1.0x as a 
-supplementary investment viability measure.
+A 3-flat priced at or below $800,000 with 15% down payment at a 6.8% 
+interest rate will generate a superior combination of Break-Even Ratio, 
+DSCR, and 5-year total ROI compared to a duplex (20% down, max $620,000) 
+or 4-unit property (15% down, max $800,000) in the Evanston market.
 
 ## Null Hypothesis
-No duplex or small multifamily property in the current Evanston market 
-priced at or below $620,000 achieves a Break-Even Ratio of 1.0x or greater 
-at a 6.8% interest rate with 20% down payment.
+There is no statistically significant difference in investment performance 
+(Break-Even Ratio, DSCR, cap rate, 5-year total ROI) between duplex, 
+3-flat, and 4-unit multifamily properties in the Evanston market at 
+current prices and financing conditions.
 
 ## Key Variables
-- **Independent:** Purchase price, interest rate, down payment percentage
-- **Dependent:** Break-Even Ratio, DSCR, Cash-on-Cash Return, Cap Rate
-- **Control:** Market rents (Zillow June 2026), Vacancy rate (Census 5.7%)
+- **Independent:** Property type (duplex, 3-flat, 4-unit), purchase price,
+  down payment percentage
+- **Dependent:** Break-Even Ratio, DSCR, Cash-on-Cash Return, Cap Rate,
+  5-year Total ROI
+- **Control:** Market rents (Zillow June 2026), Vacancy rate (Census 5.7%),
+  Interest rate (6.8%)
 
 ## Important Note on Fannie Mae Guidelines
 Fannie Mae does not apply DSCR to 2-4 unit owner-occupied residential 
@@ -29,23 +32,42 @@ DSCR (1.25x minimum) applies only to commercial multifamily properties
 with 5+ units. This project uses Break-Even Ratio as the primary 
 qualification metric and DSCR as a supplementary investment viability metric.
 
+## Financing Assumptions by Property Type
+- **Duplex:** Max $620,000 | 20% down | 6.8% rate | 30yr fixed
+- **3-flat:** Max $800,000 | 15% down | 6.8% rate | 30yr fixed
+- **4-unit:** Max $800,000 | 15% down | 6.8% rate | 30yr fixed
+
 ## Success Criteria
 A property is considered viable if it meets ALL of the following:
 - Break-Even Ratio ≥ 1.0x (Fannie Mae 2-4 unit owner-occupied guidelines)
 - DSCR ≥ 1.0x (supplementary investment viability measure)
-- LTV ≤ 80% (Fannie Mae conventional conforming requirement)
+- LTV ≤ 85% (Fannie Mae conventional conforming — 3 and 4 unit)
 - Cap Rate ≥ 5.6% (CBRE U.S. Cap Rate Survey H2 2025, Chicago metro Q1 2026)
 
 ## Data Sources
-- Sales data: Redfin (50 Evanston multifamily transactions, last 12 months)
+- Sales data: Redfin (49 Evanston multifamily transactions, last 12 months)
 - Market rents: Zillow Rental Market Trends, Evanston IL, June 3 2026
 - Vacancy rate: U.S. Census Bureau CPS/HVS Table 4, 2026 (5.7% Chicago metro)
 - Cap rate benchmark: CBRE U.S. Cap Rate Survey H2 2025 (5.6% Chicago metro Q1 2026)
 - Evanston cap rate: Cook County Assessor Evanston Township Commercial Valuations (7.93%)
+- Appreciation rates: Zillow HVI 2026 (3.5% conservative),
+  Evanston Now Feb 2026 (5.8% moderate)
 - Pro forma structure: Coach Carson Simple Rental Calculator (coachcarson.com)
 
+## Dataset Summary
+| Property Type | Count | Avg Price | Min Price | Max Price |
+|---|---|---|---|---|
+| Duplex (2 units) | 12 | $498,167 | $350,000 | $640,000 |
+| 3-flat (3 units) | 20 | $691,725 | $299,000 | $1,500,000 |
+| 4-unit (4 units) | 18 | $837,950 | $567,825 | $1,300,000 |
+| **Total** | **49** | | | |
+
 ## Expected Outcome
-Based on EDA findings (median GRM 8.01, 33 of 50 properties with GRM < 9),
-we expect a subset of properties priced at or below $620,000 to meet the 
-Break-Even Ratio threshold, concentrated in the $300k-$620k price range 
-and representing approximately 8-12 properties in our dataset.
+Based on dataset analysis and EDA findings (median GRM 8.01):
+- 3-flats have the largest sample (20 properties) and widest price range
+- We expect 3-flats to show the best balance of cash flow and appreciation
+  potential given their price range and unit count
+- Duplexes will likely show stronger per-unit metrics but lower absolute
+  returns due to fewer units
+- 4-units will likely show the highest absolute cash flow but require
+  the most capital and carry the most management complexity
